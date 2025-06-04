@@ -1,6 +1,6 @@
 # Deserializador_e_fila.VHD
 
-Este projeto é parte de uma atividade acadêmica da disciplina de Sistemas Digitais
+Este projeto é parte de uma atividade acadêmica da disciplina de Sistemas Digitais.
 O objetivo é desenvolver um circuito em VHDL que conecta duas entidades com clocks diferentes utilizando um componente "TOP".
 
 ## Descrição:
