@@ -1,6 +1,7 @@
 # Deserializador_e_fila.VHD
 
 Este projeto é parte de uma atividade acadêmica da disciplina de Sistemas Digitais.
+
 O objetivo é desenvolver um circuito em VHDL que conecta duas entidades com clocks diferentes utilizando um componente "TOP".
 
 ## Descrição:
@@ -9,7 +10,7 @@ O projeto consiste na implementação de um **deserializador** e uma **fila**, a
 
 ### Entidades envolvidas:
 - **Deserializador**: Recebe informação bit por bit e salva cada um em um vetor "vazio" de 8 bits, do qual ele devolve quando cheio, funcionando com 100KHz.
-- **Fila (Buffer)**: Armazena 8 vetores de 8 bits, funcionando com 10KHz.
+- **Fila**: Armazena 8 vetores de 8 bits, funcionando com 10KHz.
 - **TOP**: Componente principal que integra o deserializador e a fila, garantindo que ocorra a troca de dados corretamente entre os domínios de clock diferentes.
 
 ## Tecnologias Utilizadas
@@ -31,4 +32,5 @@ O projeto consiste na implementação de um **deserializador** e uma **fila**, a
 
 ## Autores
 
--Guilherme Langaro B. Silva, Felipe Santos.
+Guilherme Langaro B. Silva. 
+Felipe Santos.
