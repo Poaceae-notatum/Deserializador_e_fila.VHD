@@ -23,19 +23,20 @@ architecture DSRL of Deserializador is
 -- STATUS "0" pronto para receber bit
 -- STATUS "1" ragistrador cheio, enviando outputs
 begin
-      main: process(clk_100k)
+      main: process(clk_100k, reset)
 	variable counter : integer := 0;
 	   begin
-	    if (rising_edge(clk_100k)) then
-		if (reset = '1') then
+	if (rising_edge(reset)) then
 		 data_ready <= '0';
 		 data <= "00000000";
 		 STATUS <= '0';
 		 status_out <= '0';
 		 counter := 0;
 		 data_out <= "00000000";
-	        end if;
+	    elsif (rising_edge(clk_100k)) then
 	     if (STATUS = '0') then
+		status_out <= '0';
+		data_ready <= '0';
 	       if (write_in = '1') then
 		if (counter < 7) then
 		 data(counter) <= data_in;

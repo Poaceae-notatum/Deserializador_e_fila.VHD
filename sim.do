@@ -9,6 +9,8 @@ vcom -work work -2008 -explicit fila.vhd
 vcom -work work -2008 -explicit deserializador.vhd
 vcom -work work -2008 -explicit top.vhd
 vcom -work work -2008 -explicit TB.vhd
+vcom -work work -2008 -explicit Fila_tb.vhd
+vcom -work work -2008 -explicit DSRL_tb.vhd
 vsim work.tb
 quietly set StdArithNoWarnings 1
 quietly set StdVitalGlitchNoWarnings 1
@@ -16,4 +18,4 @@ quietly set StdVitalGlitchNoWarnings 1
 if {[file exists wave.do]} {
     do wave.do
 }
-run 10ms
+run 376000ns
