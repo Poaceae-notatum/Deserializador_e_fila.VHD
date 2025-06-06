@@ -26,10 +26,17 @@ O projeto consiste na implementação de um **deserializador** e uma **fila**, a
 
 ## Status do Projeto
 
-- ✅ Estrutura básica implementada
-- 🛠️ Em desenvolvimento/testes finais
-- 📘 Documentação em andamento
+- ✅ Estrutura básica implementada.
+- 🛠️ Finalizado, com os modulos funcionando de forma correta.
+- 📘 Documentação concluido
 
+## Resultados obtidos
+
+- Os testbench's de cada modulo.
+- O DSRL_tb mostra o deserializador se enchendo e ligando o sinal de Data_ready, não aceitando mais "inputs" até que seja providenciado o sinal ack_in, acknowledge, que limpa e libera o deserializador para receber novos inputs.
+- O Fila_tb mostra todos os modulos da fila sendo preenchidos e depois sendo esvaziado.
+- O TB, sendo o testbench principal, demonstra os dois modulos trabalhando em paralelo rodando no TOP, com a Fila recebendo os dados do Deserializador, demonstrando o caso em que o deserializador "trava" pois a fila esta cheia e o caso em que se é inserido e retirado da fila sem que ela atrapalhe o deserializador
+  
 ## Autores
 
 Guilherme Langaro B. Silva. 
