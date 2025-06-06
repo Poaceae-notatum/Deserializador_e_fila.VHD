@@ -18,4 +18,4 @@ quietly set StdVitalGlitchNoWarnings 1
 if {[file exists wave.do]} {
     do wave.do
 }
-run 376000ns
+run 488000ns
