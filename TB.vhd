@@ -31,7 +31,7 @@ clk_process : process
         end process;
 teste: process
 begin
-for i in 0 to 150 loop -- enche a fila com 8 instancias de numeros "aleatorios"
+for i in 0 to 190 loop -- enche a fila com 8 instancias de numeros "aleatorios"
     bit_in      <= not bit_in;
     write_in <= '1';
     dequeue     <= '0';
@@ -52,7 +52,7 @@ for i in 0 to 7 loop
     bit_in      <= '1';
     write_in <= '1';
     dequeue     <= '1';
-    wait for 1000 ns;
+    wait for 10000 ns;
 end loop;
 
 dequeue <= '1';

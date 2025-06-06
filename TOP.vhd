@@ -59,10 +59,11 @@ if(rising_edge(clock_100k)) then
 	
 end if;
 if (rising_edge(clock_10k)) then
-	if(enqueue = '1') then
+	if((enqueue = '1' and size < 8) or (deq = '1' and enqueue = '1')) then
     	 ack <= '1';
 	end if;
 end if;
+size := to_integer(unsigned(len_out));
 end process;
 Deserializador : entity work.deserializador port map
     (
